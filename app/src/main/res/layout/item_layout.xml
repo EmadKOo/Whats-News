@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.comix.rounded.RoundedCornerImageView
+        android:id="@+id/imageItem"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/emad"
+        app:cornerColor="@color/colorPrimary"
+        app:cornerRadius="0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="This is title"
+        android:textColor="#fff"
+        android:textSize="25sp"
+        android:background="@drawable/gradient_title"
+
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageItem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="@+id/imageItem" />
+
+    <!--<ImageView-->
+        <!--android:layout_width="411dp"-->
+        <!--android:layout_height="67dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginLeft="8dp"-->
+        <!--android:layout_marginBottom="4dp"-->
+        <!--android:src="@drawable/gradient_title"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/imageItem"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/imageItem"-->
+        <!--app:layout_constraintHorizontal_bias="1.0"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/imageItem" />-->
+
+</android.support.constraint.ConstraintLayout>

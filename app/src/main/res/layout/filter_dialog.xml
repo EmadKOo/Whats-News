@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="#fff">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/linear"
+    android:orientation="horizontal">
+
+  <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Select Category "
+    android:layout_alignParentLeft="true"
+      android:textSize="@dimen/font_size_large"
+    android:layout_centerVertical="true"
+    android:textColor="@color/colorPrimaryDark"
+    android:layout_marginRight="20dp"/>
+
+  <Spinner
+      android:id="@+id/countrySpinner"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:hint="Category"
+      android:outlineAmbientShadowColor="#7C8CD5"
+      android:outlineSpotShadowColor="#7C8CD5"
+      android:layout_toRightOf="@+id/textView"
+      android:layout_centerVertical="true"
+      />
+
+</LinearLayout>
+    <Button
+        android:id="@+id/changeCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="OK"
+        android:background="@drawable/roundedbtn"
+        android:layout_below="@id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"/>
+</RelativeLayout>
