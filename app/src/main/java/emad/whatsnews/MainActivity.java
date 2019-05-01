@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         initViews();
         initDialog();
-        getData("business");
+        getData("sports");
         Picasso.get().load(header[0]).into(imgHeaderItem);
 
     }
@@ -114,12 +114,17 @@ public class MainActivity extends AppCompatActivity {
                     public void onResponse(String response) {
                         articles.clear();
                         Log.d(TAG, "onResponse: RESPONSE " +response);
+                       try {
                         newsResponse = new Gson().fromJson(response,NewsResponse.class);
+
                         articles = newsResponse.getArticles();
                         homeAdapter = new HomeAdapter(articles, getApplicationContext());
                         homeRecyclerView.setAdapter(homeAdapter);
                         Log.d(TAG, "onResponse:  " + articles.get(0).getTitle());
                         progessbar.dismiss();
+                       }catch (Exception ex){
+                           Log.d(TAG, "onResponse: " + ex.getMessage());
+                       }
                     }
                 }, new Response.ErrorListener() {
             @Override

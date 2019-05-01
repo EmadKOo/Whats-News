@@ -48,5 +48,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgToolbar"
-        android:src="@drawable/emad" />
+        android:src="@drawable/placeholder" />
 </RelativeLayout>
